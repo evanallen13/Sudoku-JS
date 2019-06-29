@@ -1,1 +1,1 @@
-(https://sudoku-cb7e7.firebaseapp.com)[Hosting]
+[Hosting](https://sudoku-cb7e7.firebaseapp.com)
