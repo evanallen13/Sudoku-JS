@@ -1,3 +1,5 @@
+let lastBtn;
+
 let begin = [
 [0,0,0,6,0,0,7,0,0],
 [0,7,0,8,0,0,6,1,0],
@@ -30,14 +32,24 @@ for (let col = 0; col < 9; col++) {
         element.addEventListener('input',function(){
             inputEvent(element)
         })
+        element.addEventListener('click',function(){
+            lastBtn = element;
+        })
         if(begin[col][row] > 0){
             document.getElementById(id).value = begin[col][row]
             document.getElementById(id).setAttribute('disabled','true')
         }
     }
 }
+for( let num = 1; num < 10; num++){
+    let element = document.getElementById(`numtBtn${num}`);
+    element.addEventListener('click',function(){
+        numBtnsEvents(element)
+    })
+}
 
 function inputEvent(element){
+    lastBtn = element;
     if(element.value === element.name){
         element.style.color = 'green'
         element.setAttribute('disabled','true')
@@ -48,6 +60,13 @@ function inputEvent(element){
         setTimeout(function(){
             element.value = ''
         },500);
+    }
+}
+
+function numBtnsEvents(element){
+    if(lastBtn !== undefined && lastBtn.style.color !== 'green'){
+        lastBtn.value = element.innerHTML;
+        inputEvent(lastBtn)
     }
 }
 
@@ -64,3 +83,5 @@ function check(){
         }
     }
 }
+
+
