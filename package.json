@@ -1,0 +1,23 @@
+{
+  "name": "sudokujs",
+  "version": "1.0.0",
+  "description": "[hosting] (https://sudoku-cb7e7.firebaseapp.com)\r [Github] (https://github.com/evanallen13/Sudoku-JS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanallen13/Sudoku-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evanallen13/Sudoku-JS/issues"
+  },
+  "homepage": "https://github.com/evanallen13/Sudoku-JS#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "popper": "^1.0.1"
+  }
+}
