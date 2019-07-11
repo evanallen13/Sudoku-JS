@@ -1,6 +1,8 @@
 import { buildBoard } from './board/buildBoard.js';
+import { addBoards } from './createBoards.js'
 
 document.getElementById('easyBtn').addEventListener('click',function(){
+    // addBoards()
     readData('Easy')
 })
 document.getElementById('mediumBtn').addEventListener('click',function(){
